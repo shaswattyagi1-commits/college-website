@@ -1,0 +1,129 @@
+/* Consistent header, navbar, and footer styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #002147;  /* Dark Blue for professionalism and trust */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.header img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);  /* transparent for now changed it  calmness and trust */
+    padding: 10px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.navbar a:hover, .navbar a.active {
+    background-color: #001f4d;  /* Darker blue for emphasis */
+    border-radius: 5px;
+}
+.navbar .apply-now {
+    background-color: green;  /* Green for Apply Now button */
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+.footer {
+    background-color: #004080;  /* Consistent with navbar color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.footer a {
+    color: white;  /* Consistent link color in the footer */
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer a:hover {
+    color: #0073e6;  /* Bright blue for hover effect */
+}
+
+/* Add new styles for the admissions page */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+.qualities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.quality {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+.quality h3 {
+    color: #004080;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.quality p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.apply-button {
+    background-color: #0073e6; /* Bright blue for action */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+.apply-now, .apply-button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 1s ease-in-out;
+}
+
+.apply-now:hover, .apply-button:hover {
+    animation: rainbow 3s infinite; /* Reduced speed */
+}
+
+/* Rainbow keyframes */
+@keyframes rainbow {
+    0% { background-color: red; }
+    17% { background-color: orange; }
+    34% { background-color: yellow; }
+    51% { background-color: green; }
+    68% { background-color: blue; }
+    85% { background-color: indigo; }
+    100% { background-color: violet; }
+}

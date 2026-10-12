@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - S.D. College of Management Studies</title> 
+    <link rel="stylesheet" href="addmissionstyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="images/logo.png" alt="College Logo">
+        <h1>Admission Form</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Fill in Your Details</h2>
+        <div class="admission-form">
+            <form action="submit_form.php" method="post" enctype="multipart/form-data">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="email">Email (Please enter a valid Email address):</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number (Please enter a valid Contact number):</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Correspondence Address (optional):</label>
+                <textarea id="address" name="address" optional></textarea>
+                
+                <label for="permanent_address">Permanent Address:</label>
+                <textarea id="permanent_address" name="permanent_address" required></textarea>
+                
+                <label for="program">Preferred Program:</label>
+                <select id="program" name="program" required>
+                    <!-- Your options here -->
+                </select>
+
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="contact">
+        <p>&copy; 2024 S.D. College of Management Studies. All rights reserved.</p>
+        <p>Contact us: +91 1234567890</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/profile.php?id=100083430323693" target="_blank">Facebook</a>, 
+            <a href="https://x.com/Shaswat_Tyagi?t=oX70I-OtUj7CAUyKLHk7iw&s=08" target="_blank">Twitter</a>,
+            <a href="https://www.youtube.com/@ShaswatTyagi" target="_blank">YouTube</a>,
+            <a href="https://www.instagram.com/shaswat.tyagi/" target="_blank">Instagram</a>
+        </p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Admission - S.D. College of Management Studies</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="./images/college logo (4).png" alt="College Logo">
+        <h1>S.D. College of Management Studies</h1>
+    </div>
+    
+    <!-- Admission Form -->
+    <div class="content">
+        <h2>Admission Form</h2>
+        <form action="submit_form.php" method="post" enctype="multipart/form-data" class="admission-form">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Correspondence Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="permanent_address">Permanent Address:</label>
+                    <textarea id="permanent_address" name="permanent_address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Passport Photo:</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required onchange="previewPhoto()">
+                    <div id="photo-preview" class="photo-preview"></div>
+                </div>
+            </fieldset>
+            
+            <!-- Academic Record -->
+            <fieldset>
+                <legend>Academic Record</legend>
+                <div class="form-group">
+                    <label for="education_level">Education Level:</label>
+                    <div>
+                        <input type="radio" id="after_12th" name="education_level" value="after_12th" required onchange="showCourses()">
+                        <label for="after_12th">After 12th</label>
+                        <input type="radio" id="after_bachelor" name="education_level" value="after_bachelor" required onchange="showCourses()">
+                        <label for="after_bachelor">After Bachelor</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exam">Exam Passed:</label>
+                    <input type="text" id="exam" name="exam" required>
+                </div>
+                <div class="form-group">
+                    <label for="institute">Name of the Institute:</label>
+                    <input type="text" id="institute" name="institute" required>
+                </div>
+                <div class="form-group">
+                    <label for="passing_year">Passing Year:</label>
+                    <select id="passing_year" name="passing_year" required>
+                        <!-- Generate years dynamically -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade:</label>
+                    <select id="grade" name="grade" required>
+                        <option value="" disabled selected>Select your grade</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <!-- Course Selection -->
+            <fieldset>
+                <legend>Course Selection</legend>
+                <div class="form-group">
+                    <label for="program">Preferred Program:</label>
+                    <select id="program" name="program" required disabled>
+                        <option value="" disabled selected>Select your course</option>
+                        <!-- Bachelor Courses -->
+                        <optgroup id="bachelor_courses" label="Bachelor Courses" style="display: none;">
+                            <option value="bba">BBA</option>
+                            <option value="bca">BCA</option>
+                            <option value="bcom">B.Com</option>
+                            <option value="bsc_cs">B.Sc Computer Science</option>
+                            <option value="bsc_it">B.Sc Information Technology</option>
+                            <option value="ba">BA</option>
+                            <option value="bfa">BFA</option>
+                            <option value="bsc_physics">B.Sc Physics</option>
+                            <option value="bsc_chemistry">B.Sc Chemistry</option>
+                            <option value="bsc_biology">B.Sc Biology</option>
+                            <option value="btech">B.Tech</option>
+                            <option value="be">B.E.</option>
+                            <option value="llb">LLB</option>
+                            <option value="bpharm">B.Pharm</option>
+                            <option value="bnursing">B.Nursing</option>
+                        </optgroup>
+                        <!-- Master Courses -->
+                        <optgroup id="master_courses" label="Master Courses" style="display: none;">
+                            <option value="mba">MBA</option>
+                            <option value="mca">MCA</option>
+                            <option value="mcom">M.Com</option>
+                            <option value="msc_cs">M.Sc Computer Science</option>
+                            <option value="msc_it">M.Sc Information Technology</option>
+                            <option value="ma">MA</option>
+                            <option value="mfa">MFA</option>
+                            <option value="msc_physics">M.Sc Physics</option>
+                            <option value="msc_chemistry">M.Sc Chemistry</option>
+                            <option value="msc_biology">M.Sc Biology</option>
+                            <option value="mtech">M.Tech</option>
+                            <option value="me">M.E.</option>
+                            <option value="llm">LLM</option>
+                            <option value="mpharm">M.Pharm</option>
+                            <option value="mnursing">M.Nursing</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+    <form action="submit_form.php" method="post" enctype="multipart/form-data"></form>
+    <!-- Footer -->
+    <div class="footer" id="contact">
+        <p>&copy; 2024 SHASWAT TYAGI. All rights reserved.</p>
+        <p>Contact us: +91 9068645472</p>
+        <p>Follow us on:
+        <div class="social icons">
+            <a href="https://www.facebook.com/profile.php?id=100083430323693" target="_blank"><img src="./images/facebook.png" alt=""></a>
+            <a href="https://x.com/Shaswat_Tyagi?t=oX70I-OtUj7CAUyKLHk7iw&s=08" target="_blank"><img src="./images/twitter png.png" alt=""></a>
+            <a href="https://www.instagram.com/shaswat.tyagi/" target="_blank"><img src="./images/insta.png" alt=""></a>
+            <a href="https://www.youtube.com/@ShaswatTyagi" target="_blank"><img src="images/youtube.png" alt=""></a>
+        </div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+    </div>
+    
+    <script src="scripts2.js"></script>
+</body>
+</html>

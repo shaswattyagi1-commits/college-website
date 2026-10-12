@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Pictures - S.D. College of Management Studies</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        .gallery-item h3 {
+            margin: 10px 0 5px;
+        }
+
+        .gallery-item h4 {
+            margin: 5px 0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 1000px;  /* Larger max width */
+            transition: transform 0.2s;  /* Smooth transition for zoom */
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="./images/college logo (4).png" alt="College Logo">
+        <h1>Faculty Pictures</h1>
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Programs</a>
+        <a href="faculty.html" class="active">Faculty</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="life at sd. college.html">Life at S.D.college</a>
+        <a href="#contact" onclick="scrollToContact()">Contact</a>
+        <a class="apply-now" href="apply.html">Apply Now</a>
+    </div>
+    <!-- HOD Photo Section -->
+    <div class="hod-photo">
+         <img src="./images/hod.jpg" alt="HOD Photo">
+          <h2>Dr.SANJEEV TAYAL</h2>
+           <h3>Head of Department</h3>
+         </div>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="images/faculty1.jpg" alt="Faculty 1" onclick="openModal(this)">
+            <h3>naam ni pata inka abhi</h3>
+            <h4>PTI SIR</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty2.jpg" alt="Faculty 2" onclick="openModal(this)">
+            <h3>Lavi Verma, Tushar Bhardwaj</h3>
+            <h4>Decipline Department</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty 3.jpg" alt="Faculty 3" onclick="openModal(this)">
+            <h3>naam inka bhi ni pata abhi</h3>
+            <h4>the care taker of small tasks</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty4.jpg" alt="Faculty 4" onclick="openModal(this)">
+            <h3>Amit kumar dhiman,Mr. Kulvirprasad and Ankush Namdev</h3>
+            <h4>THE BEST ACCOUNTANTS S.D college</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty5.jpg" alt="Faculty 5" onclick="openModal(this)">
+            <h3>THE SNIPER SECURITY</h3>
+            <h4>They are responsible for school sequrity</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty6.jpg" alt="Faculty 6" onclick="openModal(this)">
+            <h3>Dr.Abhishek Bagla,Dr. Rajeev Singh </h3>
+            <h4>our teachers</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty7.jpg" alt="Faculty 7" onclick="openModal(this)">
+            <h3>Dr. G. Khanna</h3>
+            <h4>Professor of Business Law</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty8.jpg" alt="Faculty 8" onclick="openModal(this)">
+            <h3>Dr. H. Reddy</h3>
+            <h4>Professor of Operations</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty9.jpg" alt="Faculty 9" onclick="openModal(this)">
+            <h3>Dr. I. Desai</h3>
+            <h4>Professor of Statistics</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty10.jpg" alt="Faculty 10" onclick="openModal(this)">
+            <h3>Dr. J. Patel</h3>
+            <h4>Professor of IT</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty11.jpg" alt="Faculty 11" onclick="openModal(this)">
+            <h3>Dr. K. Mehra</h3>
+            <h4>Professor of International Business</h4>
+        </div>
+        <div class="gallery-item">
+            <img src="images/faculty12.jpg" alt="Faculty 12" onclick="openModal(this)">
+            <h3>Dr. L. Sharma</h3>
+            <h4>Professor of Entrepreneurship</h4>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <div class="footer" id="contact">
+        <p>&copy; 2024 SHASWAT TYAGI. All rights reserved.</p>
+        <p>Contact us: +91 9068645472</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/profile.php?id=100083430323693" target="_blank"><img src="./images/facebook.png"></a> 
+            <a href="https://x.com/Shaswat_Tyagi?t=oX70I-OtUj7CAUyKLHk7iw&s=08" target="_blank"><img src="./images/twitter png.png"></a>
+            <a href="https://www.youtube.com/@ShaswatTyagi" target="_blank"><img src="./images/youtube.png"></a>
+            <a href="https://www.instagram.com/shaswat.tyagi/" target="_blank"><img src="./images/insta.png"></a>
+        </p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+    </div>
+
+    <script src="script4.js"></script>
+</body>
+</html>

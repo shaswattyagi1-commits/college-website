@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - S.D. College of Management Studies</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="header">
+        <img src="./images/college logo (4).png" alt="College Logo">
+        <h1>Our Courses</h1>
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="active">Programs</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="life at sd. college.html">Life at S.D.college</a>
+        <a href="#contact" onclick="scrollToContact()">Contact</a>
+        <a class="apply-now" href="apply.html">Apply Now</a>
+    </div>
+    <div class="container">
+        <div class="course-card" onclick="showCourseDetails('bca')">
+            <h3>BCA (Bachelor of Computer Applications)</h3>
+            <p>A comprehensive course that covers programming, software development, and computer systems.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('bcom')">
+            <h3>BCOM (Bachelor of Commerce)</h3>
+            <p>Focuses on commerce, finance, accountancy, and business administration.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('bpharma')">
+            <h3>BPHARMA (Bachelor of Pharmacy)</h3>
+            <p>Study of pharmacy, medicinal chemistry, and pharmaceutical engineering.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('bba')">
+            <h3>BBA (Bachelor of Business Administration)</h3>
+            <p>Combines business, management, and entrepreneurial studies.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('llb')">
+            <h3>LLB (Bachelor of Laws)</h3>
+            <p>Provides a strong foundation in law and legal principles.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('bfa')">
+            <h3>BFA (Bachelor of Fine Arts)</h3>
+            <p>Studies in visual arts, including painting, sculpture, and graphic design.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('be')">
+            <h3>BE (Bachelor of Engineering)</h3>
+            <p>An engineering degree with various specializations like Civil, Mechanical, Electrical, etc.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('bsc')">
+            <h3>B.Sc (Bachelor of Science)</h3>
+            <p>Offers a wide range of science disciplines including Physics, Chemistry, Biology, etc.</p>
+        </div>
+        <div class="course-card" onclick="showCourseDetails('ba')">
+            <h3>BA (Bachelor of Arts)</h3>
+            <p>A versatile degree with subjects ranging from humanities to social sciences.</p>
+        </div>
+    </div>
+    <div class="popup" id="course-popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3 id="course-title"></h3>
+            <p id="course-summary"></p>
+            <p id="course-details"></p>
+        </div>
+    </div>    
+    <div class="footer" id="contact">
+        <p>&copy; 2024 SHASWAT TYAGI. All rights reserved.</p>
+        <p>Contact us: +91 9068645472</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com/profile.php?id=100083430323693" target="_blank"><img src="./images/facebook.png"></a> 
+            <a href="https://x.com/Shaswat_Tyagi?t=oX70I-OtUj7CAUyKLHk7iw&s=08" target="_blank"><img src="./images/twitter png.png"></a>
+            <a href="https://www.youtube.com/@ShaswatTyagi" target="_blank"><img src="./images/youtube.png"></a>
+            <a href="https://www.instagram.com/shaswat.tyagi/" target="_blank"><img src="./images/insta.png"></a>
+        </p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>

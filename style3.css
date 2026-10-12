@@ -1,0 +1,167 @@
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #002147;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #001f4d;
+    border-radius: 5px;
+}
+
+.navbar .apply-now {
+    background-color: green;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: #0073e6;
+}
+.gallery-item h3 {
+    margin: 10px 0 5px;  /* Adjust top and bottom margins */
+}
+
+.gallery-item h4 {
+    margin: 5px 0;       /* Adjust top and bottom margins */
+    color: #333;         /* Dark color for the profession */
+    font-weight: bold;   /* Bold text for the profession */
+}
+/* CSS for the modal (lightbox) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.hod-photo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hod-photo img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hod-photo h2 {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.hod-photo h3 {
+    margin: 5px 0;
+    color: #555;
+    font-weight: normal;
+}
